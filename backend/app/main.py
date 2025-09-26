@@ -31,4 +31,8 @@ def fetch_opensky():
     else:
         print("api not working", response)
 
-fetch_opensky()
+
+@app.get("/")
+def root():
+    return {"message":"Real-time of Open Sky Tracking"}
+
